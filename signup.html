@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Запись на занятие — Гончарная мастерская</title>
+    <meta name="description" content="Запишитесь на мастер-класс по гончарному делу. Выберите дату, формат занятия и оставьте контактные данные для подтверждения записи.">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#1A40E7">
+    <meta property="og:title" content="Запись на занятие — Гончарная мастерская">
+    <meta property="og:description" content="Выберите формат занятия по гончарному делу и отправьте заявку на участие в мастер-классе.">
+    <meta property="og:image" content="https://your-username.github.io/your-repository/img/pottery-workshop.jpg">
+  </head>
+  <body>
+    <header>
+      <a href="#content">Перейти к основному содержанию</a>
+      <h1>Запись на занятие</h1>
+      <p>Выберите удобный формат знакомства с гончарным делом</p>
+
+      <nav aria-label="Главная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="process.html">Как создаётся керамика</a></li>
+          <li><a href="signup.html">Запись на занятие</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section>
+        <h2>Перед записью</h2>
+        <p>Мастер-классы рассчитаны на начинающих. Все основные материалы и инструменты предоставляются на занятии.</p>
+
+        <ul>
+          <li>Продолжительность занятия — два часа.</li>
+          <li>Можно выбрать работу на гончарном круге или ручную лепку.</li>
+          <li>Рабочая одежда должна быть удобной и не мешать движениям.</li>
+          <li>Изготовленное изделие необходимо высушить и обжечь, поэтому забрать его сразу обычно нельзя.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Форма записи на мастер-класс</h2>
+        <p>Заполните обязательные поля и укажите предпочтительный формат занятия.</p>
+
+        <form action="https://example.org/signup" method="post">
+          <p>
+            <label for="name">Ваше имя (обязательное поле)</label><br>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   autocomplete="name"
+                   required>
+          </p>
+
+          <p>
+            <label for="email">Электронная почта (обязательное поле)</label><br>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   autocomplete="email"
+                   required>
+          </p>
+
+          <p>
+            <label for="phone">Телефон в формате +7 и 10 цифр</label><br>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   autocomplete="tel"
+                   pattern="\+7[0-9]{10}"
+                   title="Введите знак +, цифру 7 и ещё 10 цифр без пробелов, например +79771338812">
+          </p>
+
+          <p>
+            <label for="date">Желаемая дата занятия (обязательное поле)</label><br>
+            <input type="date"
+                   id="date"
+                   name="date"
+                   min="2026-10-19"
+                   required>
+          </p>
+
+          <p>
+            <label for="format">Формат участия</label><br>
+            <select id="format" name="format" required>
+              <option value="">Выберите формат</option>
+              <option value="wheel">Работа на гончарном круге</option>
+              <option value="handbuilding">Ручная лепка</option>
+              <option value="undecided">Пока не решил(а)</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="experience">Есть ли у вас опыт работы с глиной?</label><br>
+            <select id="experience" name="experience">
+              <option value="beginner">Нет, я начинающий участник</option>
+              <option value="some">Пробовал(а) несколько раз</option>
+              <option value="experienced">Уже занимался(ась) гончарным делом</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Как удобнее получить подтверждение записи?</legend>
+            <label>
+              <input type="radio" name="confirm" value="email" checked>
+              По электронной почте
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="confirm" value="phone">
+              По телефону
+            </label>
+          </fieldset>
+
+          <p>
+            <label for="message">Комментарий к записи (не более 500 знаков)</label><br>
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      maxlength="500"></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Отправить заявку</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Что происходит после записи</h2>
+        <ol>
+          <li>Вы оставляете контактные данные и выбираете формат.</li>
+          <li>Согласовываете дату и время занятия.</li>
+          <li>Получаете подтверждение и информацию о посещении мастерской.</li>
+        </ol>
+
+        <p>Форма демонстрирует HTML-разметку и встроенную проверку данных. Для реального приёма заявок потребуется подключить работающий сервер или сервис обработки форм.</p>
+      </section>
+
+      <section>
+        <h2>Вопросы об участии</h2>
+
+        <details>
+          <summary>Нужно ли покупать глину заранее?</summary>
+          <p>Нет. На ознакомительном занятии материал предоставляется мастерской.</p>
+        </details>
+
+        <details>
+          <summary>Можно ли прийти без опыта?</summary>
+          <p>Да. Программа для начинающих включает знакомство с материалом, инструментами и базовыми приёмами формования.</p>
+        </details>
+
+        <details>
+          <summary>Когда можно забрать своё изделие?</summary>
+          <p>После сушки и необходимых этапов обжига. Срок зависит от размера изделия и загрузки мастерской.</p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Дополнительная информация</h2>
+        <p>Перед занятием можно ознакомиться с <a href="process.html">этапами создания керамики</a> или вернуться на <a href="index.html">главную страницу мастерской</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><span aria-hidden="true">◆</span> Гончарная мастерская — изделия ручной работы и занятия.</p>
+      <p><a href="index.html">На главную страницу</a></p>
+    </footer>
+  </body>
+</html>
